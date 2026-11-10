@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR" data-root="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arthur Ramos</title>
+<meta name="description" content="Arthur Ramos, jornalista e designer em Brasília. Cuido da comunicação: redação, vídeo, redes sociais, design, fluxos de automação, apuração, planejamento e fotografia.">
+<meta name="theme-color" content="#0D1B2A">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/site.css">
+<script>try{var t=localStorage.getItem('tema');document.documentElement.setAttribute('data-theme',t==='light'?'light':'dark')}catch(e){document.documentElement.setAttribute('data-theme','dark')}</script>
+</head>
+<body class="travado">
+
+<div id="abertura" class="tela" hidden>
+  <div class="abertura">
+    <p class="fala f1">Oi, meu nome é Arthur.</p>
+    <p class="fala f2">Posso te contar uma história?</p>
+    <div class="opcoes">
+      <button class="btn btn-cheio sim" type="button">Sim.</button>
+      <button class="btn nao" type="button">Não, me leve para o site.</button>
+    </div>
+  </div>
+</div>
+
+<div id="percurso" class="tela" hidden>
+  <div class="percurso">
+    <div class="p-topo"><span class="n mono"></span><a href="#site">Ir direto ao site</a></div>
+    <div class="slide" aria-live="polite"></div>
+    <div class="p-base">
+      <button class="btn btn-leve ant" type="button">Voltar</button>
+      <button class="btn prox" type="button">Próximo</button>
+    </div>
+  </div>
+</div>
+
+<main id="home" hidden>
+  <div class="wrap">
+    <header class="topo"></header>
+
+    <section class="hero">
+      <h1 class="cuido"><span class="cuido-verbo">Cuido</span> <span class="tambor"><span class="tambor-win"><ul class="tambor-rolo"></ul></span></span></h1>
+      <p class="lista"></p>
+      <p class="sub">Jornalista e designer em Brasília. Disponível para assessoria e coordenação de comunicação.</p>
+    </section>
+
+    <section class="secao">
+      <div class="secao-tit"><h2>Salas</h2><a href="#historia">Ver a história</a></div>
+      <div class="salas" id="salas"></div>
+    </section>
+
+    <section class="secao prosa">
+      <p>Trabalho com texto, imagem e vídeo: reportagem, design gráfico, edição, fotografia e redes sociais. Jornalismo, design e vídeo são braços da mesma comunicação. O que importa é a mensagem chegar; a técnica serve para aumentar o volume do megafone.</p>
+      <p><a href="sobre/">Mais sobre mim</a></p>
+    </section>
+
+    <section class="secao">
+      <div class="secao-tit"><h2>Contato</h2></div>
+      <div class="contato" id="contato"></div>
+    </section>
+
+    <footer class="rodape"></footer>
+  </div>
+</main>
+
+<script src="data/site.js"></script>
+<script src="data/pecas.js"></script>
+<script src="data/percurso.js"></script>
+<script src="assets/site.js"></script>
+<script src="assets/home.js"></script>
+</body>
+</html>

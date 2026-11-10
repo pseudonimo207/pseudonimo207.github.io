@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sobre · Arthur Ramos</title>
+<meta name="description" content="Quem é Arthur Ramos: jornalista e designer em Brasília, formado em Comunicação Organizacional pela UnB.">
+<meta name="theme-color" content="#0D1B2A">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/fonts.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script>try{var t=localStorage.getItem('tema');document.documentElement.setAttribute('data-theme',t==='light'?'light':'dark')}catch(e){document.documentElement.setAttribute('data-theme','dark')}</script>
+</head>
+<body data-sala="sobre">
+<div class="wrap">
+  <header class="topo"></header>
+  <section class="sala-cab">
+    <p class="mono">Sobre</p>
+    <h1 style="color:var(--fg)">Arthur Ramos</h1>
+  </section>
+  <section class="prosa" style="padding-bottom:40px">
+    <p>Sou jornalista e designer em Brasília. Trabalho com texto, imagem e vídeo: reportagem, design gráfico, edição de vídeo, fotografia, redes sociais e alguns scripts que tiram trabalho braçal da rotina.</p>
+    <p>Formado em Comunicação Organizacional pela UnB (2017–2022). Passei por estágios na Conexis Brasil Digital, no CAU/BR e na Gráfica Novas Ideias; por freelas desde 2020, incluindo a diagramação de uma cartilha nacional entregue aos candidatos à Presidência em 2022; pelo Correio Braziliense, como repórter multimídia (2023–2024); e pelo Metrópoles, na editoria de redes sociais (2024–2026).</p>
+    <p>Jornalismo, design e vídeo são braços da mesma comunicação. O que me interessa é a mensagem chegar. A técnica serve para aumentar o volume do megafone.</p>
+    <p>O que procuro agora: uma vaga de assessoria ou coordenação de comunicação, para cuidar do todo, e não só de uma parte.</p>
+  </section>
+  <section class="secao">
+    <div class="secao-tit"><h2>O que eu faço</h2></div>
+    <div class="itens">
+      <article class="item"><h3>Redação e apuração</h3><p>Matérias, roteiros, textos institucionais e para redes.</p></article>
+      <article class="item"><h3>Design gráfico e identidade visual</h3><p>Marcas, cartilhas, revistas, capas e peças digitais.</p></article>
+      <article class="item"><h3>Vídeo</h3><p>Captação, edição e formatos para redes, do reel ao documentário curto.</p></article>
+      <article class="item"><h3>Fotografia</h3><p>Shows, eventos e reportagem.</p></article>
+      <article class="item"><h3>Social media e planejamento</h3><p>Conteúdo, calendário, publicação e acompanhamento.</p></article>
+      <article class="item"><h3>Automação de rotinas</h3><p>Scripts que tiram trabalho repetitivo do caminho, feitos com ajuda de IA.</p></article>
+    </div>
+  </section>
+  <section class="secao prosa">
+    <div class="secao-tit"><h2>Línguas</h2></div>
+    <p>Português. Inglês fluente. Espanhol e francês básicos.</p>
+  </section>
+  <section class="secao">
+    <div class="secao-tit"><h2>Contato</h2></div>
+    <div class="contato" id="contato"></div>
+  </section>
+  <footer class="rodape"></footer>
+</div>
+<script src="../data/site.js"></script>
+<script src="../assets/site.js"></script>
+<script>
+(function () {
+  var c = (window.SITE.contato || {}), esc = window.AR.esc, itens = [];
+  if (c.email) itens.push('<a href="mailto:' + esc(c.email) + '">' + esc(c.email) + '</a>');
+  if (c.linkedin) itens.push('<a href="' + esc(c.linkedin) + '" target="_blank" rel="noopener">LinkedIn</a>');
+  if (c.github) itens.push('<a href="' + esc(c.github) + '" target="_blank" rel="noopener">GitHub</a>');
+  document.getElementById('contato').innerHTML = itens.length ? itens.join('') : '<span class="nada">E-mail e redes em breve.</span>';
+})();
+</script>
+</body>
+</html>

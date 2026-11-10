@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Painel</title>
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/fonts.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script>try{var t=localStorage.getItem('tema');document.documentElement.setAttribute('data-theme',t==='light'?'light':'dark')}catch(e){document.documentElement.setAttribute('data-theme','dark')}</script>
+</head>
+<body>
+<div class="painel">
+  <p class="mono">Painel</p>
+  <h1>Ordem dos temas</h1>
+  <p class="explica">Arraste (ou use as setas) para colocar os temas na ordem que a vaga pede. O primeiro da lista é o último que aparece antes de "Cuido de tudo." e o primeiro da lista visível. Depois, gere o link e mande.</p>
+  <ul class="ordem" id="ordem"></ul>
+  <p class="previa" id="previa"></p>
+  <div class="acoes">
+    <button class="btn btn-cheio" id="gerar" type="button">Gerar link</button>
+    <button class="btn btn-leve" id="resetar" type="button">Voltar à ordem básica</button>
+  </div>
+  <div class="saida" id="saida" hidden>
+    <input id="link" type="text" readonly aria-label="Link gerado">
+    <button class="btn" id="copiar" type="button">Copiar</button>
+  </div>
+</div>
+<script src="../data/site.js"></script>
+<script src="../assets/site.js"></script>
+<script src="../assets/painel.js"></script>
+</body>
+</html>

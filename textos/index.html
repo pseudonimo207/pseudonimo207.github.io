@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Textos · Arthur Ramos</title>
+<meta name="description" content="Textos de Arthur Ramos, fora de pauta: comunicação, política, cinema, design e o que mais aparecer.">
+<meta name="theme-color" content="#0D1B2A">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/fonts.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script>try{var t=localStorage.getItem('tema');document.documentElement.setAttribute('data-theme',t==='light'?'light':'dark')}catch(e){document.documentElement.setAttribute('data-theme','dark')}</script>
+</head>
+<body data-sala="textos">
+<div class="wrap">
+  <header class="topo"></header>
+  <section class="sala-cab">
+    <p class="mono">Sala</p>
+    <h1>Textos</h1>
+    <p>Textos meus, fora de pauta. Comunicação, política, cinema, design e o que mais aparecer.</p>
+  </section>
+  <div id="textos"></div>
+  <footer class="rodape"></footer>
+</div>
+<script src="../data/site.js"></script>
+<script src="../data/textos.js"></script>
+<script src="../assets/site.js"></script>
+<script>
+(function () {
+  document.documentElement.style.setProperty('--cor', 'var(--textos)');
+  var el = document.getElementById('textos'), T = window.TEXTOS || [], esc = window.AR.esc;
+  if (!T.length) { el.innerHTML = '<p class="vazio">Este espaço começa vazio de propósito. Os textos chegam aos poucos.</p>'; return; }
+  el.innerHTML = '<div class="itens">' + T.map(function (t) {
+    return '<article class="item"><p class="mono">' + esc(window.AR.fmtData(t.data)) + '</p><h3>' + esc(t.titulo) + '</h3><p>' + esc(t.resumo || '') + '</p></article>';
+  }).join('') + '</div>';
+})();
+</script>
+</body>
+</html>
